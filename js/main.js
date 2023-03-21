@@ -24,14 +24,15 @@ const searchStates = async searchText => {
 const outputHtml = matches => {
     if(matches.length > 0){
         const html = matches.map(match => `
-        <div class="card card-body mb-1">
-            <h4>${match.name} (${match.abbr}) <span 
-            class="text-primary">${
-                match.capital
-            }</span></h4>
-            <small>Lat: ${match.lat} / Long: ${match.long}</small>
-        </div>
-
+        <a href="https://www.google.com/">
+            <div class="card card-body mb-1">
+                <h4>${match.name} (${match.abbr}) <span 
+                class="text-primary">${
+                    match.capital
+                }</span></h4>
+                <small>Lat: ${match.lat} / Long: ${match.long}</small>
+            </div>
+        </a>        
         `)
         .join('')
 
